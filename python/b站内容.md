@@ -49,3 +49,8 @@
 24 Python Django WEB 商城项目实战 [BV1z54y1R7Cf](https://www.bilibili.com/video/bv1z54y1R7Cf/)
 
 25 爬虫基础与实战 [BV1z541167mu](https://www.bilibili.com/video/bv1z541167mu/)
+
+
+
+visal
+
