@@ -63,6 +63,7 @@
 | $\prod{x}$              | \prod{x}              |
 | $\prod_{n=1}^{99}{x_n}$ | \prod_{n=1}^{99}{x_n} |
 ## 希腊字母
+
 | 大写 | markdown | 小写     | markdown |
 | ---- | -------- | -------- | -------- |
 | $A$  | A        | $\alpha$ | \alpha   |
@@ -91,20 +92,93 @@
 |$Psi$|\Psi| $\psi$        |\psi|
 |$\Omega$|\Omega| $\omega$      |\omega|
 
+## 在字母上面的上表
+
+|               |                 |
+| ------------- | --------------- |
+| $\hat{a}$     | $\tilde{a}$     |
+| $\check{a}$   | $\acute{a}$     |
+| $\dot{a}$     | $\ddot{a}$      |
+| $\bar{a}$     | $\vec{a}$       |
+| $\widehat{A}$ | $\widetilde{A}$ |
+|               |                 |
+|               |                 |
+|               |                 |
+|               |                 |
+
 
 
 ## 关系运算符
 
-| 算式     | markdown |
-| -------- | -------- |
-| $\pm$    | \pm      |
-| $\times$ | \times   |
-| $\cdot$  | \cdot    |
-| $\div$   | \div     |
-| $\neq$   | \neq     |
-| $\equiv$ | \equiv   |
-| $\leq$   | \leq     |
-| $\geq$   | \geq     |
+| 算式        | markdown |
+| ----------- | -------- |
+| $\pm$       | \pm      |
+| $\times$    | \times   |
+| $\cdot$     | \cdot    |
+| $\div$      | \div     |
+| $\setminus$ |          |
+| $\star$     |          |
+| $\ast$      |          |
+| $\cup$      |          |
+| $\cap$      |          |
+| $\vee$      |          |
+| $\wedge$    |          |
+| $\oplus$    |          |
+| $\ominus$   |          |
+| $\odot$     |          |
+| $\oslash$   |          |
+| $\otimes$   |          |
+| $\bigcirc$  |          |
+| $\bullet$   |          |
+| $\uplus$    |          |
+| $\amalg$    |          |
+| $\neq$      | \neq     |
+| $\equiv$    | \equiv   |
+| $\leq$      | \leq     |
+| $\geq$      | \geq     |
+| $\ll$       | \ll      |
+| $\subset$   |          |
+| $\subseteq$ |          |
+| $\in$       |          |
+| $\mid$      |          |
+| $\supset$   |          |
+| $\supseteq$ |          |
+| $\ni$       |          |
+| $\notin$    |          |
+| $\simeq$    |          |
+| $\approx$   |          |
+| $\cong$     |          |
+| $\Join$     |          |
+| $\bowtie$   |          |
+| $\propto$   |          |
+| $\perp$     |          |
+| $\neq$      |          |
+|             |          |
+
+## 大尺度运算符
+
+| $\sum$                                    |      |
+| ----------------------------------------- | ---- |
+| $\bigcup,\bigcap$                         |      |
+| $\bigvee,\bigwedge$                       |      |
+| $\prod,\coprod$                           |      |
+| $\bigoplus,\bigotimes,\bigodot,\biguplus$ |      |
+| $\int$                                    |      |
+| $\oint$                                   |      |
+|                                           |      |
+|                                           |      |
+|                                           |      |
+|                                           |      |
+
+## 定界符
+
+| $\langle,\rangle$                  | ---  |
+| ---------------------------------- | ---- |
+| $\uparrow,\downarrow,\updownarrow$ |      |
+| $\Uparrow,\Downarrow,\Updownarrow$ |      |
+|                                    |      |
+
+
 
 ## 三角函数
 
@@ -126,6 +200,11 @@
 | $\infty$                                                     | \infty                                                       |
 | $\emptyset$                                                  | \emptyset                                                    |
 | $\exists$                                                    | \exists                                                      |
+| $\nabla$                                                     | \nabla                                                       |
+| $\bot$                                                       | \bot                                                         |
+| $\angle$                                                     | \angle                                                       |
+| $\because$                                                   | \because                                                     |
+| $\therefore$                                                 | \therefore                                                   |
 | 空格 $a \quad b$                                             | a \quad b                                                    |
 | $ c(u)=\begin{cases} \sqrt\frac{1}{N}，u=0\\ \sqrt\frac{2}{N}， u\neq0\end{cases} $ | c(u)=\begin{cases} \sqrt\frac{1}{N}，u=0\\ \sqrt\frac{2}{N}， u\neq0\end{cases} |
 |                                                              |                                                              |
@@ -135,6 +214,8 @@
 | 公式                                                 | markdown                                           |
 | ---------------------------------------------------- | -------------------------------------------------- |
 | $\begin{aligned} a &=b+c+d \\ &=e+f+g \end{aligned}$ | \begin{aligned} a &=b+c+d \\ &=e+f+g \end{aligned} |
+
+
 
 
 
