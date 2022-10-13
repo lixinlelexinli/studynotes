@@ -1,0 +1,55 @@
+<p>&nbsp;</p>
+<h1>字符类速记</h1>
+<figure><table>
+<thead>
+<tr><th style='text-align:center;' >符号</th><th style='text-align:center;' >含义</th><th style='text-align:center;' >举例</th></tr></thead>
+<tbody><tr><td style='text-align:center;' >.</td><td style='text-align:center;' >除换行符之外的任意字符，或带re.DOTALL标记的任意字符，或匹配字符类内部的字面意义的字符</td><td style='text-align:center;' >&nbsp;</td></tr><tr><td style='text-align:center;' >\d</td><td style='text-align:center;' >匹配一个Unicode数字，或带re.ASCII标记的[0~9]</td><td style='text-align:center;' >&nbsp;</td></tr><tr><td style='text-align:center;' >\D</td><td style='text-align:center;' >一个Unicode非数字，或带re.ASCII标记的[^0~9]</td><td style='text-align:center;' >&nbsp;</td></tr><tr><td style='text-align:center;' >\s</td><td style='text-align:center;' >一个Unicode空白，或re.ASCII标记的[\t\n\r\f\v]</td><td style='text-align:center;' >&nbsp;</td></tr><tr><td style='text-align:center;' >\S</td><td style='text-align:center;' >一个Unicode非空白，或re.ASCII标记的[^\t\n\r\f\v]</td><td style='text-align:center;' >&nbsp;</td></tr><tr><td style='text-align:center;' >\w</td><td style='text-align:center;' >匹配一个Unicode单词字符，或带re.ASCII标记的[a-zA-Z0-9_]</td><td style='text-align:center;' >&nbsp;</td></tr><tr><td style='text-align:center;' >\W</td><td style='text-align:center;' >匹配一个Unicode非单词字符，或带re.ASCII标记的[^a-zA-Z0-9_]</td><td style='text-align:center;' >&nbsp;</td></tr><tr><td style='text-align:center;' >{m,n}</td><td style='text-align:center;' >m，n分表表示使用该量词表达式必须匹配的最少次数与最多次数，如e{1,1}e{1,1}与e{2,2}都可以匹配feel，但都不能匹配felt</td><td style='text-align:center;' >&nbsp;</td></tr><tr><td style='text-align:center;' >+</td><td style='text-align:center;' >至少一次</td><td style='text-align:center;' >&nbsp;</td></tr><tr><td style='text-align:center;' >*</td><td style='text-align:center;' >任意次</td><td style='text-align:center;' >&nbsp;</td></tr><tr><td style='text-align:center;' >{N}</td><td style='text-align:center;' >匹配前面出现的正则表达式N次</td><td style='text-align:center;' >[0-9]{3}</td></tr><tr><td style='text-align:center;' >{M,N}</td><td style='text-align:center;' >匹配重复出现M到N次的正则表达式</td><td style='text-align:center;' >【0-9】{5，9}</td></tr><tr><td style='text-align:center;' >[...]</td><td style='text-align:center;' >匹配字符组中出现的任意字符</td><td style='text-align:center;' >【aeiou】</td></tr><tr><td style='text-align:center;' >[x-y]</td><td style='text-align:center;' >匹配从字符x到y的任意一个字符</td><td style='text-align:center;' >[0-9],[a-z]</td></tr><tr><td style='text-align:center;' >[^...]</td><td style='text-align:center;' >不匹配字符集的任意字符</td><td style='text-align:center;' >【^aeiou】</td></tr></tbody>
+</table></figure>
+<h1>正则表达式量词</h1>
+<figure><table>
+<thead>
+<tr><th style='text-align:center;' >语法</th><th style='text-align:center;' >含义</th></tr></thead>
+<tbody><tr><td style='text-align:center;' >e? or e{0,1}</td><td style='text-align:center;' >贪婪地匹配表达式e的0次或1次出现</td></tr><tr><td style='text-align:center;' >e?? or e{0,1}?</td><td style='text-align:center;' >非贪婪地匹配表达式e e+或e{1,}的0次或1次出现，贪婪地匹配表达式e的1次或多次出现</td></tr><tr><td style='text-align:center;' >e+? or e{1.}?</td><td style='text-align:center;' >非贪婪地匹配表达式e的1次或多次出现</td></tr><tr><td style='text-align:center;' >e* or e{0,}</td><td style='text-align:center;' >贪婪地匹配表达式e的0次或1次出现</td></tr><tr><td style='text-align:center;' >e*? or e{0,}?</td><td style='text-align:center;' >非贪婪地匹配表达式e的0次或多次出现</td></tr><tr><td style='text-align:center;' >e{m}</td><td style='text-align:center;' >准确匹配表达式e的m次出现</td></tr><tr><td style='text-align:center;' >e{m,}</td><td style='text-align:center;' >贪婪的匹配e的至少m次出现</td></tr><tr><td style='text-align:center;' >e{m,}?</td><td style='text-align:center;' >非贪婪地匹配e的至少m次出现</td></tr><tr><td style='text-align:center;' >e{,n}</td><td style='text-align:center;' >贪婪地匹配e的至多n次出现</td></tr><tr><td style='text-align:center;' >e{,n}?</td><td style='text-align:center;' >非贪婪地匹配e的至多n次出现</td></tr><tr><td style='text-align:center;' >e{m,n}</td><td style='text-align:center;' >贪婪地匹配e的至少m次，至多n次出现</td></tr><tr><td style='text-align:center;' >e{m,n}?</td><td style='text-align:center;' >非贪婪地匹配e的至少m次，至多n次出现</td></tr></tbody>
+</table></figure>
+<p>&nbsp;</p>
+<h1>组与捕获</h1>
+<figure><table>
+<thead>
+<tr><th>语法</th><th>含义</th></tr></thead>
+<tbody><tr><td>|</td><td>或</td></tr><tr><td>()</td><td>对表达式进行组合，捕获匹配某个表达式的文本</td></tr><tr><td>(\w+)=(.+)</td><td>key=value，匹配每个具有非空键与非空值的行</td></tr><tr><td>[\t]*(\w+)[\t]* = [\t]*(.+)</td><td>key=value，匹配每个具有非空键与非空值的行，等号左右两边可以有空白字符</td></tr><tr><td>?P<name></td><td>对捕获进行命名，再左圆括号后面跟?P<name>，(?P<key>\w+)=(?P<value>.+)</td></tr></tbody>
+</table></figure>
+<p>&nbsp;</p>
+<h1>断言与标记</h1>
+<figure><table>
+<thead>
+<tr><th>符号</th><th>含义</th></tr></thead>
+<tbody><tr><td>\b</td><td>在单词边界匹配，在前面的字符必须是个单词，跟随其后的字符必须是一个非单词，\bword\b</td></tr><tr><td>^</td><td>在起始处匹配</td></tr><tr><td>$</td><td>在结尾处匹配</td></tr><tr><td>\A</td><td>在起始处匹配</td></tr><tr><td>\B</td><td>在非单词变介匹配</td></tr><tr><td>\Z</td><td>在结尾处匹配</td></tr><tr><td>(?=e)</td><td>表达式e在此处匹配，但没有超越此处，前瞻，匹配</td></tr><tr><td>(?!e)</td><td>表达式e在此处不匹配，也没有超越此处，负前瞻，匹配</td></tr><tr><td>(?&lt;=e)</td><td>表达式e恰好在此之前匹配，正回顾，匹配</td></tr><tr><td>(?&lt;!e)</td><td>表达式e恰好在此之前不匹配，负回顾，匹配</td></tr></tbody>
+</table></figure>
+<p>&nbsp;</p>
+<h1>正则表达式模块</h1>
+<figure><table>
+<thead>
+<tr><th>语法</th><th>描述</th></tr></thead>
+<tbody><tr><td>re.compile(r,f)</td><td>返回编译后的正则表达式r，如果指定，就将其标记设置为f</td></tr><tr><td>re.escape(s)</td><td>返回字符串s，其中所有非字母数字的字符都使用反斜线进行转义</td></tr><tr><td>re.findall(r,s,f)</td><td>返回正则表达式r在字符串s中所有非交叠的匹配（如果给定f，就受其制约）。如果有捕获，每一匹配都作为一个捕获元组返回</td></tr><tr><td>re.finditer(r,s,f)</td><td>返回正则表达式r在字符串s中每个非交叠的匹配（如果给定f，就受其制约），都返回一个匹配对象</td></tr><tr><td>re.match(r,s,f)</td><td>r在字符串s的起始处匹配，返回一个匹配对象，否则返回None</td></tr><tr><td>re.search(r,s,f)</td><td>r在字符串s的任意位置处匹配，返回一个匹配对象，否则None</td></tr><tr><td>re.split(r,s,m)</td><td>返回分割字符串s（在r每次出现处进行分割）所产生的字符串的列表，之多分割m次</td></tr><tr><td>re.sub(r,x,s,m)</td><td>对r的每次匹配返回字符串s的一个副本，并将其替换为x——可以是个字符串，也可以是个函数</td></tr><tr><td>re.subn(r,x,s,m)</td><td>与re.sub()相同，返回一个二元组，其中一项为生成的字符串，一项为代入的次数</td></tr></tbody>
+</table></figure>
+<h1>正则表达式模块的标记</h1>
+<figure><table>
+<thead>
+<tr><th>标记</th><th>含义</th></tr></thead>
+<tbody><tr><td>re.A</td><td>使用\b，\B，\s，\S，\w与\W都假定字符串为ASCII,</td></tr><tr><td>re.I 或re.IGNORECASE</td><td>以大小写不敏感的方式进行匹配</td></tr><tr><td>re.M</td><td>使^在起始处并在每个换行符后匹配，使$在结尾处并在每个换行符前匹配</td></tr><tr><td>re.S</td><td>使  .  匹配每个字符，包括换行符</td></tr><tr><td>re.X</td><td>是空白与注释包含在匹配中</td></tr></tbody>
+</table></figure>
+<p>&nbsp;</p>
+<h1>正则表达式对象方法</h1>
+<figure><table>
+<thead>
+<tr><th>语法</th><th>描述</th></tr></thead>
+<tbody><tr><td>rx.findall(s,start,end)</td><td>返回s的start:end分片中正则表达式的所有非交叠的匹配，返回捕获元组</td></tr><tr><td>rx.finditer(s,start,end)</td><td>返回s的start:end分片中正则表达式的所有非交叠的匹配，返回匹配对象</td></tr><tr><td>rx.flags</td><td>正则表达式编译时设置的标记</td></tr><tr><td>rx.groupindex</td><td>一个字典，其键位捕获组名，值为捕获组编号，</td></tr><tr><td>rx.match(s,start,end)</td><td>s的起始处匹配(start:end分片起始处)，返回一个匹配对象，否则返回None</td></tr><tr><td>rx.pattern</td><td>被编译时使用的字符串</td></tr><tr><td>rx.search(s,start,end)</td><td>任意位置匹配对象，</td></tr><tr><td>rx.plit(s,m)</td><td>返回字符串分割列表，最多m个</td></tr><tr><td>rx.sub(x,s,m)</td><td>返回s的副本，每个匹配处使用x替换</td></tr><tr><td>rx.subn(x,s,m)</td><td>返回二元组，一项时结果字符串，一项是所做替换的个数</td></tr></tbody>
+</table></figure>
+<p>&nbsp;</p>
+<h1>其他</h1>
+<figure><table>
+<thead>
+<tr><th>语法</th><th>含义</th></tr></thead>
+<tbody><tr><td>\d+</td><td>一个或多个整数</td></tr><tr><td>&lt;img[^&gt;]*&gt;</td><td>匹配&lt;img标签</td></tr></tbody>
+</table></figure>
+<p>&nbsp;</p>
